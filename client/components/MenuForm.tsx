@@ -132,7 +132,9 @@ export default function MenuForm({
             step="0.01"
             min="0"
             value={formData.price}
-            onChange={(e) => setFormData({ ...formData, price: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, price: e.target.value })
+            }
             placeholder="0.00"
             className="w-full px-4 py-2 bg-input border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
           />

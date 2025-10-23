@@ -32,7 +32,9 @@ export default function ClientMenu() {
 
   // Apply filters
   if (selectedCategory) {
-    displayItems = displayItems.filter((item) => item.category === selectedCategory);
+    displayItems = displayItems.filter(
+      (item) => item.category === selectedCategory,
+    );
   }
   if (showFavoritesOnly) {
     displayItems = displayItems.filter((item) => isFavorite(item.id));
@@ -47,7 +49,7 @@ export default function ClientMenu() {
     displayItems = displayItems.filter(
       (item) =>
         item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.description.toLowerCase().includes(searchTerm.toLowerCase())
+        item.description.toLowerCase().includes(searchTerm.toLowerCase()),
     );
   }
 
@@ -57,7 +59,7 @@ export default function ClientMenu() {
       acc[cat] = displayItems.filter((item) => item.category === cat);
       return acc;
     },
-    {} as Record<string, typeof displayItems>
+    {} as Record<string, typeof displayItems>,
   );
 
   return (
@@ -204,7 +206,7 @@ export default function ClientMenu() {
                       ))}
                     </div>
                   </div>
-                ) : null
+                ) : null,
               )
             )}
           </div>
@@ -233,7 +235,8 @@ export default function ClientMenu() {
       <footer className="bg-card border-t border-border mt-16">
         <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 text-center">
           <p className="text-muted-foreground mb-4">
-            Interested in booking Christoffel for your private dining experience?
+            Interested in booking Christoffel for your private dining
+            experience?
           </p>
           <a
             href="mailto:contact@christoffel.com"

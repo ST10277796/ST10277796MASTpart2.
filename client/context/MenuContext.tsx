@@ -247,7 +247,7 @@ export const MenuProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const updateItem = (id: string, updates: Partial<MenuItem>) => {
     setItems(
-      items.map((item) => (item.id === id ? { ...item, ...updates } : item))
+      items.map((item) => (item.id === id ? { ...item, ...updates } : item)),
     );
   };
 
@@ -273,7 +273,7 @@ export const MenuProvider: React.FC<{ children: React.ReactNode }> = ({
     setFavorites((prev) =>
       prev.includes(itemId)
         ? prev.filter((id) => id !== itemId)
-        : [...prev, itemId]
+        : [...prev, itemId],
     );
   };
 

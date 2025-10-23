@@ -13,7 +13,7 @@ export default function ChefDashboard() {
   const [showForm, setShowForm] = useState(false);
   const [editingItem, setEditingItem] = useState<MenuItem | null>(null);
   const [selectedDate, setSelectedDate] = useState(
-    new Date().toISOString().split("T")[0]
+    new Date().toISOString().split("T")[0],
   );
 
   const todayItems = items.filter((item) => item.date === selectedDate);
@@ -127,7 +127,7 @@ export default function ChefDashboard() {
           <div className="space-y-8">
             {categories.map((category) => {
               const categoryItems = todayItems.filter(
-                (item) => item.category === category
+                (item) => item.category === category,
               );
               if (categoryItems.length === 0) return null;
 
