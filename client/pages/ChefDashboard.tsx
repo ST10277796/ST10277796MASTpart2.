@@ -185,7 +185,7 @@ export default function ChefDashboard() {
                         {/* Footer */}
                         <div className="flex items-center justify-between pt-3 border-t border-border">
                           <p className="font-serif font-bold text-lg text-primary">
-                            ${item.price.toFixed(2)}
+                            R{item.price.toFixed(2)}
                           </p>
                           <div className="flex gap-2">
                             <button
