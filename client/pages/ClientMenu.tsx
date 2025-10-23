@@ -306,7 +306,7 @@ function MenuItem({ item }: { item: any }) {
 
       {/* Price */}
       <p className="text-2xl font-serif font-bold text-primary">
-        ${item.price.toFixed(2)}
+        R{item.price.toFixed(2)}
       </p>
     </div>
   );
