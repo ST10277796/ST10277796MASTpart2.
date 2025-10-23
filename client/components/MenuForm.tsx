@@ -125,7 +125,7 @@ export default function MenuForm({
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
           <label className="block text-sm font-semibold text-foreground mb-2">
-            Price ($) *
+            Price (R) *
           </label>
           <input
             type="number"
